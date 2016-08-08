@@ -92,7 +92,7 @@ if __name__ == '__main__':
     res = prog.match(args.location)
     if res:
         log.debug('Using coords from CLI directly')
-        position = (float(res.group(1)), float(res.group(2)), float(res.group(3))
+        position = (float(res.group(1)), float(res.group(2)), float(res.group(3)))
     else:
         log.debug('Lookig up coords in API')
         position = util.get_pos_by_name(args.location)
